@@ -1,0 +1,10 @@
+{
+    "name": "denomadesCards",
+    "version": "1.0.0",
+    "main": "app/index.html",
+    "dependencies": {
+        "angular": "latest",
+        "tingle": "latest"
+    },
+    "appPath": "app"
+}

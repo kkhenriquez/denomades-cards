@@ -1,0 +1,218 @@
+// Variables
+$color-accent: #039be5;
+$color-secondary: #66BB6A;
+$color-white: #ffffff;
+$color-dark: #232323;
+$color-gray: rgba(153,153,153,1);
+$text-color: #141E23;
+
+$breakpoint-s: 800px;
+$breakpoint-xs: 420px;
+
+$font: 'Fira Sans', sans-serif;
+
+body {
+  font-family: $font;
+}
+
+.popular-programs {
+  display: flex;
+  flex-direction: column;
+}
+.popular-programs__card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popular-programs__title {
+  text-align: center;
+  text-transform: none;
+  font-weight: normal;
+  //letter-spacing: 0.07em;
+}
+
+%btn {
+  padding: 8px 16px;
+  background-color: $color-accent;
+  color: $color-white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    background-color: darken($color-accent, 5%);
+  }
+}
+
+.tingle-btn--primary {
+  @extend %btn;
+}
+
+program-card {
+  //border: 1px solid hotpink;
+  margin: 12px;
+  flex: 1 0 auto;
+  box-shadow: 0px 0px 9px -1px rgba($color-dark,0.5);
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: calc(25% - 24px);
+  color: $text-color;
+
+  @media screen and (max-width: $breakpoint-s) {
+    width: calc(50% - 24px);
+  }
+
+  @media screen and (max-width: $breakpoint-xs) {
+    width: calc(100% - 24px);
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 9px -1px rgba($color-dark,0.5);
+    transform: translateY(-4px);
+    cursor: pointer;
+  }
+
+  .img {
+    padding-bottom: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .contenido {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .contenido__main {
+      flex-grow: 1;
+      .title {
+        font-size: 1.2em;
+      }
+      .city {
+        font-size: 0.9em;
+        padding-bottom: 12px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .final {
+      width: 100%;
+
+    }
+    .price {
+      padding-bottom: 12px;
+      color: $color-gray;
+      span {
+        font-weight: 700;
+        color: $color-secondary;
+      }
+    }
+    .cta {
+      @extend %btn;
+    }
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba($color-dark,0.5);
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  span {
+    padding: 8px 16px;
+    border: 1px solid $color-white;
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.modal-overlay {
+  @extend .card-overlay;
+
+  a {
+    display: inline;
+    padding: 12px 24px;
+    font-size: 1.5em;
+    letter-spacing: 0.055em;
+    border: 1px solid $color-white;
+    color: $color-white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.no-display {
+  display: none;
+}
+
+.modal-img {
+  padding-bottom: 48%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.tingle-modal--overflow {
+  padding-top: 3vh;
+}
+
+.tingle-modal-box__content {
+  padding: 0;
+}
+
+.modal-content__container {
+  padding: 12px;
+  .modal-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    .modal-title-container {
+      flex: 1 0 auto;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .modal-title {
+    font-size: 1.5em;
+  }
+  .modal-city {
+    padding-bottom: 12px;
+    font-size: 0.9em;
+  }
+  .modal-price {
+    font-size: 1.5em;
+    padding-right: 12px;
+    color: $color-gray;
+    span {
+      font-weight: 700;
+      color: $color-secondary;
+    }
+  }
+  .modal-included {
+    padding-bottom: 6px;
+  }
+}
