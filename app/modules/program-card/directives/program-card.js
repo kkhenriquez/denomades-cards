@@ -21,17 +21,11 @@ angular.module('denomadesApp.programCard')
           stickyFooter: false,
           closeMethods: ['overlay', 'button', 'escape'],
           closeLabel: "Close",
-          //cssClass: ['custom-class-1', 'custom-class-2'],
         });
-        // set content
         modal.setContent(document.querySelector('.modal-'+attrs.info).innerHTML);
-        // add a button
         modal.addFooterBtn('Reserva ahora', 'tingle-btn tingle-btn--primary', function() {
-          // here goes some logic
           modal.close();
         });
-        // add another button
-        // open modal
         modal.open();
       }
     }
