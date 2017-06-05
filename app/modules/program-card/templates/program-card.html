@@ -8,15 +8,17 @@
     <p class="title">
       {{data.name}}
     </p>
-    <p class="city">
-      {{data.city}}
-    </p>
+    <div class="sub-container">
+      <p class="city">
+        {{data.city}}
+      </p>
+      <p class="price">
+        {{data.currency}} <span>{{data.price}}</span>
+      </p>
+    </div>
   </div>
   <div class="final">
   </div>
-  <p class="price">
-    {{data.currency}} <span>{{data.price}}</span>
-  </p>
   <a href="#" class="cta">Reserva ahora</a>
 </div>
 <div class="modal-content no-display">
