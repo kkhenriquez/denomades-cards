@@ -72,4 +72,4 @@ For more information on this project please contact [me][kevin].
 [npm]: https://www.npmjs.org/
 [app-link]: https://kkhenriquez.github.io/denomades-cards
 [multicaja]: https://www.multicaja.cl/paypal/
-[kevin]: kevinkonrad93@gmail.com
+[kevin]: mailto:kevinkonrad93@gmail.com
