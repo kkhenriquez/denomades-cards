@@ -1,0 +1,49 @@
+<div class="img" style="background-image: url('{{data.image}}')">
+  <div class="card-overlay" ng-click="showModal()">
+    <span>Ver más</span>
+  </div>
+</div>
+<div class="contenido">
+  <div class="contenido__main" ng-click="showModal()">
+    <p class="title">
+      {{data.name}}
+    </p>
+    <p class="city">
+      {{data.city}}
+    </p>
+  </div>
+  <div class="final">
+  </div>
+  <p class="price">
+    {{data.currency}} <span>{{data.price}}</span>
+  </p>
+  <a href="#" class="cta">Reserva ahora</a>
+</div>
+<div class="modal-content no-display">
+  <div class="modal-{{info}}">
+    <div class="modal-img" style="background-image: url('{{data.image}}')">
+      <div class="modal-overlay">
+        <a href="">Reserva ahora</a>
+      </div>
+    </div>
+    <div class="modal-content__container">
+      <div class="modal-main-container">
+        <div class="modal-title-container">
+          <p class="modal-title">
+            {{data.name}}
+          </p>
+          <p class="modal-city">
+            {{data.city}}
+          </p>
+        </div>
+        <div class="modal-price-container">
+          <span class="modal-price">
+            {{data.currency}} <span>{{data.price}}</span>
+          </span>
+        </div>
+      </div>
+      <p class="modal-included">Incluye: {{data.included}}</p>
+      <p class="modal-not_included">No incluye: {{data.not_included}}</p>
+    </div>
+  </div>
+</div>

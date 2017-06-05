@@ -46,7 +46,7 @@ gulp.task('reload', function () {
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: "./app"
+			baseDir: "./docs"
 		}
 	});
 });
@@ -78,9 +78,14 @@ gulp.task('copy-icons', function() {
 	.pipe(gulp.dest('docs'))
 });
 
+gulp.task('copy-template', function() {
+	return gulp.src('app/modules/program-card/templates/program-card.html')
+	.pipe(gulp.dest('docs/modules/program-card/templates/'))
+});
+
 gulp.task('build', function (callback) {
   runSequence('clean:docs',
-    ['sass', 'useref', 'modernizr-2', 'copy-icons'],
+    ['sass', 'useref', 'modernizr-2', 'copy-icons', 'copy-template'],
     callback
   )
 });
