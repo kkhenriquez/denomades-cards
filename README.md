@@ -3,7 +3,7 @@ Programs section for denomades.com
 
 ## Demo
 
-You can see the demo [here](https://kkhenriquez.github.io/denomades-cards)
+You can see the demo [here](https://kkhenriquez.github.io/denomades-cards).
 
 ## Getting Started
 
