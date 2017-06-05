@@ -101,7 +101,8 @@ program-card {
     .sub-container {
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 12px;
+      padding-bottom: 6px;
+      align-items: center;
     }
     p {
       margin: 0;
@@ -109,6 +110,7 @@ program-card {
     .price {
       color: $color-gray;
       flex: 0 0 auto;
+      padding-bottom: 6px;
       span {
         font-weight: 700;
         color: $color-secondary;
